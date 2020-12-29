@@ -8,12 +8,14 @@
       <th>Launch Date</th>
    </tr>
 <!--Note that the "column" here displays all the content in each column-->
-<tr *ngFor="let column of satellites">
-    <td>{{column.name}}</td>
-    <td [class.warning]="column.shouldShowWarning()">{{column.type}}</td>
-    <td>{{column.operational}}</td>
-    <td>{{column.orbitType}}</td>
-    <td>{{column.launchDate}}</td>
-</tr>
+   <tr *ngFor="let column of satellites">
+      <td>{{column.name}}</td>
+      <td [class.warning]="column.shouldShowWarning()">{{column.type}}</td>
+      <td>{{column.operational}}</td>
+      <td>{{column.orbitType}}</td>
+      <td>{{column.launchDate}}</td>
+   </tr>
+
+   <tr ng-class-odd="'odd'" ng-class-even="'even'"></tr>
 
 </table>
